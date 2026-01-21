@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -10,10 +10,6 @@ import GlyphorBadge from '../utils/GlyphorBadge';
 
 const Index = () => {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
 
   return (
     <div ref={containerRef} className="relative bg-black">
